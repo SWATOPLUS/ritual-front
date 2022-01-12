@@ -1,0 +1,24 @@
+.text_container {
+    padding: 90px 0;
+    color: white;
+    background: linear-gradient(0deg, rgba(14, 38, 73, 0.95), rgba(14, 38, 73, 0.95)), url("../../public/images/back.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: left;
+    background-attachment: fixed;
+    text-align: center;
+    .title {
+        font-weight: 600;
+        font-size: 50px;
+        line-height: 40px;
+        letter-spacing: 0.02em;
+        margin-bottom: 50px;
+    }
+    .body {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 31px;
+        letter-spacing: 0.02em;
+        text-align: left;
+    }
+}

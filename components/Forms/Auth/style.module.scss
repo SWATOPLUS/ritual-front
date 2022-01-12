@@ -1,0 +1,27 @@
+.btn {
+    background: linear-gradient(84.38deg, #8383F7 -89.95%, #1919F1 136.37%);
+    border: none;
+    height: 51px;
+    width: 100%;
+    border: none;
+}
+.or {
+    margin-top: 10px !important;
+    text-align: center;
+}
+.password {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: rgba(51, 51, 243, 0.9);
+}
+
+.point {
+    border-color: rgba(0, 0, 0, 0.28) !important;
+    &::after {
+        background-color: rgba(0, 0, 0, 0.28) !important;
+    }
+}
+.btn_group {
+    margin-top: 15px !important;
+}

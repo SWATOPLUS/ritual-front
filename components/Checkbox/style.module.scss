@@ -1,0 +1,29 @@
+.point {
+    border: solid 2px white;
+    position: relative;
+    max-width: 16px;
+    max-height: 16px;
+    min-width: 16px;
+    min-height: 16px;
+    border-radius: 100%;
+    margin: 5px;
+    &.active {
+        &::after {
+            content: " ";
+            position: absolute;
+            background-color: white;
+            border-radius: 100%;
+            width: 8px;
+            height: 8px;
+            top: 2px;
+            left: 2px;
+        }
+    }
+}
+.point_component {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.28);
+    margin-top: 15px;
+}

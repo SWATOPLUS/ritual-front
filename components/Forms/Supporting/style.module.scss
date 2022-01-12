@@ -1,0 +1,50 @@
+.textdiv {
+    display: none;
+    -webkit-user-modify: read-write-plaintext-only;
+}
+.description {
+    color: #3939D6;
+    margin-bottom: 30px;
+}
+.textinput {
+    resize: none;
+    overflow: hidden;
+    border: none;
+    
+}
+.textdiv, .textinput {
+    outline: none;
+    padding: 10px;
+    width: 90%;
+    word-break: break-all;
+    height: fit-content;
+    min-height: 46px;
+    background: none;
+}
+.btn {
+    width: 10%;
+    padding: 10px;
+    border: none;
+    background: none;
+}
+.container_input {
+    width: 50%;
+    display: flex;
+    align-items: self-start;
+    justify-content: center;
+    background-color: white;
+    flex-wrap: wrap;
+    border-radius: 7px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 576px) {
+    .container_input {
+        width: 100%;
+    }
+}

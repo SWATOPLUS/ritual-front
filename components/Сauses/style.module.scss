@@ -1,0 +1,22 @@
+.cause {
+
+    position: relative;
+    text-align: left;
+    .cause_icon {
+        position: absolute;
+        width: 20px;
+        top: 5px;
+        padding-top: 10px;
+    }
+    .cause_body {
+        padding: 10px 30px;
+    }
+}
+.causes_container {
+    margin-top: 90px;
+    margin-bottom: 90px;
+    text-align: center;
+    .causes_title {
+        margin-bottom: 60px;
+    }
+}

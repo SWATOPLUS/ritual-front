@@ -1,0 +1,30 @@
+.banner {
+    background: linear-gradient(0deg, rgba(34, 34, 168, 0.32), rgba(34, 34, 168, 0.32)), linear-gradient(89.92deg, rgba(5, 5, 5, 0.71) -3.97%, rgba(2, 2, 2, 0) 108.89%), url("../../public/images/back.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: left;
+    background-attachment: fixed;
+    color: white;
+    padding: 19vw 12vw;
+    .title {
+        font-weight: 600;
+        font-size: 75px;
+        line-height: 74px;
+        font-family: 'Cormorant' 'Garamond';
+        margin-bottom: 25px;
+    }
+    .description {
+        font-weight: 500;
+        font-size: 19px;
+        line-height: 23px;
+        
+    }
+    .btn {
+        background: linear-gradient(84.38deg, #8383F7 -89.95%, #1919F1 136.37%);
+        border: none;
+        margin-top: 70px;
+        width: 210px;
+        height: 56px;
+    }
+    
+}

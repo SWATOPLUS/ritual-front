@@ -1,0 +1,28 @@
+.field {
+    position: relative;
+    margin-top: 20px;
+    
+    .field_input {
+        border: 1px solid #9E9E9E;
+        width: 100%;
+        background: none;
+        z-index: 1;
+        margin-top: 20px;
+
+        ~span{
+            font-size: 13px;
+            line-height: 16px;
+            color: rgba(0, 0, 0, 0.4);
+            left: 0;
+            position: absolute;
+        }
+        &[op="password"] {
+            -webkit-text-security: disc !important;
+        }
+    }
+}
+.icon {
+    width: 15px;
+    height: 15px;
+    margin-left: 10px;
+}

@@ -1,0 +1,14 @@
+.title {
+    font-family: var(--bs-body-font-family);
+    font-size: 50px;
+    margin: 10px;
+    &.start {
+        text-align: start;
+    }
+    &.center {
+        text-align: center;
+    }
+    &.end {
+        text-align: end;
+    }
+}

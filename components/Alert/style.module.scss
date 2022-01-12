@@ -1,0 +1,21 @@
+.alert {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 9999;
+    margin-top: 10px;
+    padding: 10px;
+    box-shadow: 0px 5px 10px #0000009e;
+    transition: all 1s;
+    top: -500px;
+    background-color: #ff3b3b;
+    color: white;
+    font-weight: 700;
+    &.active {
+        top: 0px;
+    }
+    &.success {
+        background: #9eff9e;
+        color: black;
+    }
+}

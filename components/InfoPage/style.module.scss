@@ -1,0 +1,36 @@
+.info {
+    min-height: 100%;
+    background:  linear-gradient(0deg, #0E2649 0%, rgba(14, 38, 73, 0.84) 115.53%), linear-gradient(0deg, rgba(34, 34, 168, 0.32), rgba(34, 34, 168, 0.32)), url('../../public/images/back.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: left;
+    background-attachment: fixed;
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'Montserrat';
+    font-size: 18px;
+}
+.content {
+    margin-top: 45px;
+    white-space: break-spaces;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 30px;
+    color: rgba(255, 255, 255, 0.632);
+}
+.title {
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 74px;
+    text-align: center;
+}
+.title_text {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}

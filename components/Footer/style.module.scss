@@ -1,0 +1,19 @@
+.footer {
+    padding: 45px;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.02em;
+    color: rgb(137, 137, 137);
+    @media screen and (max-width: 600px) {
+        justify-content: center;
+    }
+    a {
+        color: rgb(137, 137, 137);
+        text-decoration: none;
+    }
+}

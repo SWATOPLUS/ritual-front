@@ -1,0 +1,52 @@
+.name {
+    margin-right: 100% !important;
+    width: 50%;
+}
+.review {
+    width: 100%;
+    resize: none;
+    outline: none;
+    height: 150px;
+}
+.review, .name {
+    border: 1px solid #555555;
+    border-radius: 0;
+    background: none;
+    margin: 10px 0;
+    padding: 10px 15px;
+}
+.btn {
+    margin-top: 75px;
+    background: #0E2649;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    padding: 10px 20%;
+    
+}
+.con {
+    text-align: center;
+}
+.thank {
+    display: flex;
+    align-items: center;
+    .circle_success {
+        background-color: #0E2649;
+        padding: 11px;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+    }
+    p {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 59px;
+        color: #0E2649;
+        margin-left: 20px !important;
+    }
+}

@@ -1,0 +1,37 @@
+
+.navbar_content {
+    align-items: center;
+    display: flex;
+
+    .navbar_items {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: auto;
+        * {
+            margin-left: 4vw;
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+.navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    padding: 5px 20px;
+}
+
+.link {
+    color: white;
+    margin: 0;
+}
+.btn_group {
+    button {
+        &:first-child {
+            border-radius: 7px 0 0 7px !important;
+        }
+        &:last-child {
+            border-radius: 0 7px 7px 0 !important;
+        }
+    }
+}

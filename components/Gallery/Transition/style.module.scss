@@ -1,0 +1,39 @@
+.item {
+    border-radius: 10px;
+    height: 240px;
+    background-color: gray;
+    margin-right: 10px;
+    overflow: hidden;
+    img, video {
+        height: 100%;
+    }
+}
+.gallery {
+    display: flex;
+    position: absolute;
+}
+.gallery_con {
+    overflow: hidden;
+    width: 100%;
+    height: 240px;
+    position: relative;
+    mix-blend-mode: exclusion;
+}
+.hidden {
+    background: linear-gradient(270deg, #000000 , rgba(12, 36, 72, 0) 30%);
+    position: absolute;
+    
+    height: 100%;
+    width: 100%;
+}
+.btn {
+    margin-top: 20px;
+    background: #3939D6;
+    border: none;
+}
+.con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+}

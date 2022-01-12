@@ -1,0 +1,43 @@
+.container {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    
+}
+.description {
+    * {
+        margin: 20px 0;
+    }
+    h1 {
+        font-weight: bold;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: 0.02em;
+    }
+}
+.btn_grad {
+    background: linear-gradient(82.45deg, #FFFFFF -262.27%, #2C2CEB 161.29%);
+    margin-top: 125px;
+    width: 250px;
+    height: 60px;
+}
+
+.qr_container {
+    position: relative;
+    overflow: hidden;
+    .qr_code {
+        background-image: url('../../public/images/qr-code.svg');
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        left: 67%;
+        top: 0;
+        z-index: 1;
+        @media screen and (max-width: 761px) {
+            left: 27%;
+            top: 35%;
+        }
+    }
+}
