@@ -13,7 +13,7 @@ export const Footer = () => {
                 <div>
                     <a href={politic} download>Политика конфиденциальности</a> | <a href={ifelse} download>Условия пользования</a>
                 </div>
-                ©Все права защищены
+                ©2022 RIQR & CO. Все права защищены.
             </div>
             <div/>
         </footer>
