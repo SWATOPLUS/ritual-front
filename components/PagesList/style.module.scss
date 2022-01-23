@@ -29,6 +29,8 @@
 .btn {
     margin: 5px;
     width: 100px;
+    text-align: center;
+    padding: 0.375rem 0rem;
 }
 
 .status_content {
@@ -57,7 +59,7 @@
 .buttons {
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 
@@ -100,7 +102,7 @@
 .hidden_page {
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     grid-column-start: 2;
     grid-column-end: 4;
     margin: 0 20px;
@@ -129,7 +131,7 @@
     .hidden_page {
         grid-row: 2;
         grid-column: 1;
-        justify-content: start;
+        justify-content: flex-start;
         margin: 0;
     }
 }
