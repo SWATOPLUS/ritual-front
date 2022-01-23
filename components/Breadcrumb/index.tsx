@@ -5,10 +5,12 @@ import styles from './style.module.scss'
 interface BreadcrumbProps {
     children: ReactNode,
     onChange?: Function,
-    defaultItem?: number
+    defaultItem?: number;
+    selectedItem?: number;
+
 } 
 
-const Breadcrumb = ({children, onChange = ()=>{}, defaultItem}: BreadcrumbProps) => {
+const Breadcrumb = ({children, onChange = ()=>{}, defaultItem, selectedItem}: BreadcrumbProps) => {
     const [activeEl, setActiveEl] = useState<number | undefined>(defaultItem);
     const handleClick = (i:number) => { onChange(i); setActiveEl(i); }
 
@@ -17,7 +19,7 @@ const Breadcrumb = ({children, onChange = ()=>{}, defaultItem}: BreadcrumbProps)
             {React.Children.map(children, (child: any, i: number)=> (
                 React.cloneElement(child,{
                     onClick: () => { handleClick(i) },
-                    isActive: activeEl == i
+                    isActive: typeof selectedItem === 'number' ? selectedItem === i : activeEl == i,
                 })
             ))}
         </div>
