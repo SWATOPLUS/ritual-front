@@ -41,6 +41,9 @@ export const PageForm  = ({ page, onSubmit }: PageFormProps) => {
     const [mainImage, setMainImage] = useState(page? page.avatar?.id : 0);
 
     const handleSubmit = (data: any) => {
+        if(videos.some((x: any) => x.isLoading )) {
+            return;
+        }
         const picturesId = pictures.map((image: any) => image.id);
         const videosId = videos.map((video: any) => video.id);
         onSubmit({
