@@ -29,32 +29,34 @@ export const Field = ({icon, label = "", data, name, onClick }: FieldProps) => {
         if(onClick){
             onClick()
         }else {
-            if(!isChange && value) {
-                setIsChange(true);
-            } else if (value) {
-                setIsChange(false);
-                if(name === "email") {
-                    editEmailReq({ email: value }).then(()=> {
-                        alert.setState({
-                            isShow: true,
-                            isSuccess: true,
-                            text: 'E-mail изменён, подтвердите его на своей почте'
-                        });
-                    })
-                }else {
-                    userEditReq({user: {[name]: value}}).then(()=> {
-                        alert.setState({
-                            isShow: true,
-                            isSuccess: true,
-                            text: 'Изменения успешно сохранены'
-                        });
-                    })
-                }
-            } else {
+            if(!isChange) {
                 setIsChange(true);
             }
         }
     }
+
+    const handleBlur = () => {
+        if (value) {
+            setIsChange(false);
+            if(name === "email") {
+                editEmailReq({ email: value }).then(()=> {
+                    alert.setState({
+                        isShow: true,
+                        isSuccess: true,
+                        text: 'E-mail изменён, подтвердите его на своей почте'
+                    });
+                })
+            }else {
+                userEditReq({user: {[name]: value}}).then(()=> {
+                    alert.setState({
+                        isShow: true,
+                        isSuccess: true,
+                        text: 'Изменения успешно сохранены'
+                    });
+                })
+            }
+        }
+    };
     const handleChange = (ev: any) => setValue(ev.target.value);
 
     useEffect(() => {
@@ -83,7 +85,8 @@ export const Field = ({icon, label = "", data, name, onClick }: FieldProps) => {
                             type="text"
                             value={value}
                             className={classNames(styles.field_input, { [styles.hidden]: !isChange })}
-                            onChange={handleChange}/>
+                            onChange={handleChange}
+                            onBlur={handleBlur}/>
                         
                     </div>
                 </div>
