@@ -34,7 +34,7 @@ const Cause = ({icon, title, text}: CauseType) => {
         <div className={styles.cause}>
             <img src={icon.src} className={styles.cause_icon}/>
             <div className={styles.cause_body}>
-                <strong>{title}</strong>
+                <div className={styles.cause_title}>{title}</div>
                 <p>{text}</p>
             </div>
         </div>
