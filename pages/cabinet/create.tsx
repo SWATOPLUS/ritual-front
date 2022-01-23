@@ -12,7 +12,7 @@ const Create: NextPage = () => {
     const router = useRouter();
 
     const handleCreatePage = (data: any) => {
-        createPageReq({page: data}).then((res: any)=> {
+        return createPageReq({page: data}).then((res: any)=> {
             alert.setState({isShow: true, isSuccess: true, text: 'Cтраница успешно создана'})
             router.push(`/page/${res.data.id}`);
         }).catch(()=> {

@@ -13,7 +13,7 @@ import { createPageReq } from "../../../api/page";
 
 interface PageFormProps {
     page?: any,
-    onSubmit: (data: any) => void
+    onSubmit: (data: any) => Promise<void>;
 }
 
 export const PageForm  = ({ page, onSubmit }: PageFormProps) => {
@@ -39,11 +39,18 @@ export const PageForm  = ({ page, onSubmit }: PageFormProps) => {
     const [pictures, setPictures] = useState(page? page.pictures: []);
     const [videos, setVideos] = useState(page? page.videos: []);
     const [mainImage, setMainImage] = useState(page? page.avatar?.id : 0);
+    const [isSubmitting, setIsSubmitting]  = useState(false);
 
     const handleSubmit = (data: any) => {
         if(videos.some((x: any) => x.isLoading )) {
             return;
         }
+
+        if (isSubmitting) {
+            return;
+        }
+        
+        setIsSubmitting(true);
         const picturesId = pictures.map((image: any) => image.id);
         const videosId = videos.map((video: any) => video.id);
         onSubmit({
@@ -54,7 +61,8 @@ export const PageForm  = ({ page, onSubmit }: PageFormProps) => {
             pictures: picturesId,
             videos: videosId,
             avatar: mainImage
-        });
+        })
+        .catch(() => setIsSubmitting(false));
     }
 
     const handleChangeNational = (data: any) => {
