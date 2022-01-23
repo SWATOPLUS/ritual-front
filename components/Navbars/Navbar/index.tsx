@@ -19,7 +19,7 @@ export const Navbar = () => {
     const modal = useModalContext();
     const dispatch = useDispatch();
     const isLoggedIn = useSelector((state:any) => state.auth.isLoggedIn);
-    const handleOpen = () => modal?.setModal({name: AUTH, isShow: true});
+    const handleOpen = () => modal?.setModal({name: AUTH, isShow: true, tabId: 'auth'});
     const handleLogout = () => dispatch(logout());
     
     return (

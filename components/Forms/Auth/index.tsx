@@ -1,6 +1,6 @@
 import { Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import {  useState } from 'react'
+import {  useEffect, useState } from 'react'
 import { Row, Col } from 'react-bootstrap'
 
 import { Form } from "../Form";
@@ -16,6 +16,7 @@ import { setCookie } from "../../../utils/cookies"
 import { useDispatch } from "react-redux";
 import { login, register } from "../../../redux/actions/auth";
 import { useAlertContext } from "../../../contexts/alert";
+import { useModalContext } from "../../../contexts/modals";
 
 type InputsRegister = {
     login: string,
@@ -34,10 +35,31 @@ type InputsLogin = {
 export const AuthForm = () => {
     const registerForm = useForm<InputsRegister>({reValidateMode: "onSubmit", mode: "onSubmit"});
     const loginForm = useForm<InputsLogin>();
-    const [page, setPage] = useState(0);
+    let [page, setPage] = useState(0);
+    let defaultPage = null;
     const [save, setSave] = useState(false);
     const dispatch = useDispatch();
     const alert = useAlertContext();
+    const modal = useModalContext();
+
+    useEffect(() => {
+        const tabId = modal.state.tabId;
+        console.log('ue ' + tabId);
+
+        if (!tabId) {
+            return;
+        }
+
+        if (tabId === 'auth') {
+            setPage(1);
+            page = 1;
+        } else {
+            setPage(0);
+            page = 0;
+        }
+
+        modal.setModal((x) => ({...x, tabId: undefined}));
+    });
 
     const submitLogin = (data: any) => dispatch(login(data, alert))
 
@@ -46,6 +68,8 @@ export const AuthForm = () => {
     const handleChangeForm = (i: number) =>{
         setPage(i)
     }
+
+    
 
     const fieldsReg = [
         {
@@ -99,9 +123,9 @@ export const AuthForm = () => {
 
     return (
         <div>
-            <Breadcrumb onChange={handleChangeForm} defaultItem={page}>
-                <Breadcrumb.Item>Регистрация</Breadcrumb.Item>
-                <Breadcrumb.Item>Вход</Breadcrumb.Item>
+            <Breadcrumb onChange={handleChangeForm} defaultItem={page} selectedItem={page}>
+                <Breadcrumb.Item isActive={page === 0}>Регистрация</Breadcrumb.Item>
+                <Breadcrumb.Item isActive={page === 1}>Вход</Breadcrumb.Item>
             </Breadcrumb>
             
             {page? (

@@ -11,6 +11,7 @@ const ModalContext = createContext<ModalContext >({} as ModalContext);
 interface ModalState {
     isShow: boolean,
     name: string,
+    tabId?: string;
     pageIdDelete?: number
 }
 interface ModalContext {
