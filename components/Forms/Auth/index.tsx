@@ -17,6 +17,7 @@ import { useDispatch } from "react-redux";
 import { login, register } from "../../../redux/actions/auth";
 import { useAlertContext } from "../../../contexts/alert";
 import { useModalContext } from "../../../contexts/modals";
+import { RECOVER } from "../../../constants/modal";
 
 type InputsRegister = {
     login: string,
@@ -41,6 +42,9 @@ export const AuthForm = () => {
     const dispatch = useDispatch();
     const alert = useAlertContext();
     const modal = useModalContext();
+    
+    const recoverPassForm = useModalContext().setModal({name: RECOVER, isShow: true})
+    const handleRecover = recoverPassForm;
 
     useEffect(() => {
         const tabId = modal.state.tabId;
@@ -149,7 +153,7 @@ export const AuthForm = () => {
                                 <Button onClick={loginForm.handleSubmit(submitLogin)} className={styles.btn}>Войти</Button>
                             </Col>
                             <Col xs={6} className={styles.password}>
-                                Забыли пароль?
+                                <Button onClick={handleRecover}>Забыли пароль?</Button>
                             </Col>
                         </Row>
                     </Form>
