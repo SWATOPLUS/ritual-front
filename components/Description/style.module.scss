@@ -6,9 +6,9 @@
 .description {
     h3 {
         margin: 0 0 20px 0;
+        font-weight: 600;
     }
     h1 {
-        font-weight: bold;
         font-weight: 600;
         font-size: 40px;
         line-height: 40px;
@@ -16,6 +16,7 @@
     }
 }
 .btn_grad {
+    font-weight: 700;
     background: linear-gradient(82.45deg, #FFFFFF -262.27%, #2C2CEB 161.29%);
     margin-top: 125px;
     width: 250px;
