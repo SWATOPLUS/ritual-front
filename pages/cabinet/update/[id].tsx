@@ -20,7 +20,7 @@ const Update: NextPage<UpdatePageProps> = ({page, id}) => {
     const handleBack = () => router.back()
 
     const handleUpdatePage = (data: any) => {
-        updatePageReq({page: {...data, id} }).then((res: any) => {
+        return updatePageReq({page: {...data, id} }).then((res: any) => {
             router.push('/cabinet/pages');
             alert.setState({isShow: true, isSuccess: true, text: 'Изменения успешно сохранены'})
         }).catch(() => {
