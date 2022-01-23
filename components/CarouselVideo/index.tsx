@@ -85,7 +85,9 @@ export const CarouselVideo = ({videos, setVideos}: CarouselVideoProps) => {
                     } 
                     return (
                         <div key={video.id} className={styles.item}>
-                           <video src={pathFromServer(video.url)} controls></video>
+                            <div className={styles.content}>
+                                <video src={pathFromServer(video.url)} controls></video>
+                            </div>
                         </div> 
                     )
                 })}

@@ -5,6 +5,7 @@
     align-items: center;
     left: -40%;
     margin-top: 50px;
+    max-height: 540px;
 }
 
 .item {
@@ -67,6 +68,9 @@
     display: flex;
     justify-content: center;
     .btn {
+        font-weight: 600;
+        height: 50px;
+        width: 200px;
         background: #3939D6;
         border: none;
     }
