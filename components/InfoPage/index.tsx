@@ -1,5 +1,7 @@
+import { useRouter } from "next/router"
 import { ReactNode } from "react"
-import { Container } from "react-bootstrap"
+import { Button, Container } from "react-bootstrap"
+import { useSelector } from "react-redux"
 import { Footer } from "../../components/Footer"
 import styles from './style.module.scss'
 
@@ -11,9 +13,20 @@ interface InfoPageProps {
 }
 
 export const InfoPage = ({text, title, children, paddingTop = "120px"}: InfoPageProps) => {
+    const router = useRouter();
+    const isLoggedIn = useSelector((state:any) => state.auth.isLoggedIn);
+
+    const handleBack = () => {
+        if(isLoggedIn) {
+            router.push(`/cabinet`)
+        }
+        return
+    }
+    
     return (
         <div className={styles.info}>
             <main style={{paddingTop}}>
+                <Button onClick={handleBack} className={styles.btn}>Назад</Button>
                 {text && title? (
                 <Container>
                     <p className={styles.title}>
