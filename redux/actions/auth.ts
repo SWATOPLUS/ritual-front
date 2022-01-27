@@ -1,3 +1,4 @@
+import { getCookie } from './../../utils/cookies';
 import router from "next/router";
 import { Dispatch } from "redux";
 import { entryGoogleReq, entryVkReq, loginReq, logoutReq, registerReq, verifyEmailReq } from "../../api/auth";
@@ -126,10 +127,13 @@ export const verifyEmail = (hash: any) => (dispatch: Dispatch) => {
 
 export const logout = () => {
     return async (dispatch: Dispatch, getState: any) => {
-        const refresh = getState().auth.refresh;
-        await logoutReq({ refresh}).then(()=>{
-            dispatch(deAuthenticateAction())
-        })
+        const refresh = getCookie("refresh");
+
+        if (refresh) {
+            await logoutReq(refresh);
+        }
+        
+        dispatch(deAuthenticateAction());
         router.push('/');
     }
 };

@@ -3,7 +3,7 @@ import axios from "./index";
 export const loginReq = (data: any) => axios.post('users/login/', data);
 export const registerReq = (data: any) => axios.post( "users/register/", data );
 export const refreshReq = () => axios.post("token/refresh/");
-export const logoutReq = (refresh: any) => axios.post('users/logout/', refresh);
+export const logoutReq = (refresh: string) => axios.post('users/logout/', {refresh});
 
 export const verifyEmailReq = (hash: any) => axios.post('verify_email/', { hash }, );
 
