@@ -64,7 +64,7 @@ export const Page = ({
         )
         if(payed) return (
             <div className={styles.hidden_page}>
-                Скрыть страницу
+                <div>Скрыть страницу</div>
                 <div className={styles.checkbox}>
                     <input className={styles.checkbox_field} type="checkbox" defaultChecked={priv}/>
                     <span></span>
