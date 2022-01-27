@@ -93,7 +93,7 @@ export const CarouselVideo = ({videos, setVideos}: CarouselVideoProps) => {
                 })}
             </Slider>
             <input ref={inputRef} type="file" multiple style={{display: 'none'}} accept="video/*"/>
-            <Button onClick={handleAddVideo} className={styles.btn}>Прикрепить видео</Button>
+            <Button onClick={handleAddVideo} className={styles.btn_video + ' ' + styles.btn}>Прикрепить видео</Button>
         </div>
     )
 }

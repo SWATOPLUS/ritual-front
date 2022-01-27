@@ -3,7 +3,7 @@ import AsyncSelect from "react-select/async";
 import { getNationalyReq } from "../../../api/page";
 import { pathFromServer } from "../../../utils/fromServer";
 import { date, required } from "../../../utils/validFields";
-import { Form } from "../Form";
+import { Field, Form } from "../Form";
 import { DefaultInput } from "../Inputs/DefaultInput";
 import styles from './style.module.scss'
 
@@ -51,7 +51,7 @@ export const BiographyForm = ({ biographyForm, onChangeNational, defaultNational
         })
     }
 
-    const fieldsBio = [
+    const fieldsBio: Field[] = [
         {
             name: "name",
             title: "Имя:",
@@ -83,6 +83,7 @@ export const BiographyForm = ({ biographyForm, onChangeNational, defaultNational
             name: "date_of_birth",
             title: "Дата рождения:",
             type: 'date',
+            className: styles.single_line_field,
             valid: {
                 ...date,
                 ...required
@@ -92,6 +93,7 @@ export const BiographyForm = ({ biographyForm, onChangeNational, defaultNational
             name: "date_of_death",
             title: "Дата смерти:",
             type: 'date',
+            className: styles.single_line_field,
             valid: {
                 ...date,
                 ...required
