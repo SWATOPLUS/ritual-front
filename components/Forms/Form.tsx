@@ -18,7 +18,8 @@ export interface Field {
     placeholder?: string | undefined,
     password?: boolean | undefined,
     valid: Partial<any>,
-    data?: Array<any>
+    data?: Array<any>;
+    className?: string;
 }
 
 export const Form = ({Input, children, fields, valid: { register, formState: { errors } }}: FormProps) => {
@@ -26,6 +27,7 @@ export const Form = ({Input, children, fields, valid: { register, formState: { e
         <div className={styles.form}>
             {fields.map((val, ind)=> {
                 return <Input 
+                    className={val.className}
                     title={val.title}
                     placeholder={val.placeholder}
                     register={register(val.name, val.valid)} 
