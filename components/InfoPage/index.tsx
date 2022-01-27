@@ -18,7 +18,7 @@ export const InfoPage = ({text, title, children, paddingTop = "120px"}: InfoPage
 
     const handleBack = () => {
         if(isLoggedIn) {
-            router.push(`/cabinet`)
+            router.back()
         }
         return
     }
@@ -26,9 +26,8 @@ export const InfoPage = ({text, title, children, paddingTop = "120px"}: InfoPage
     return (
         <div className={styles.info}>
             <main style={{paddingTop}}>
-                <Button onClick={handleBack} className={styles.btn}>Назад</Button>
                 {text && title? (
-                <Container>
+                    <Container>
                     <p className={styles.title}>
                         {title}
                     </p>
@@ -48,6 +47,7 @@ export const InfoPage = ({text, title, children, paddingTop = "120px"}: InfoPage
                 ): null}
                 {children? (
                     <Container>
+                        <Button variant="outline-light" onClick={handleBack}>Назад</Button>
                         {children}
                     </Container>
                 ) : null}    
