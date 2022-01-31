@@ -54,7 +54,7 @@ export const CarouselImage = ({images, setImages, mainImage, setMainImage}: Caro
                             return ( 
                                 <div 
                                     key={val.id}
-                                    style={{transform: `translate(${(ind/(images.length-1))*30}px, ${(ind/(images.length-1))*30}px)`, zIndex: 10 - ind}}
+                                    style={{transform: `translate(${(ind/(images.length-1))*15}px, ${(ind/(images.length-1))*15}px)`, zIndex: 10 - ind}}
                                     className={styles.item}>
                                     <div className={styles.block_point}>
                                         <Checkbox onClick={()=>handleClickPoint(val.id)} active={mainImage == val.id}/>
