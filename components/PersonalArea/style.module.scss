@@ -155,11 +155,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        font-size: 17px;
+        line-height: 21px;
 
         &:first-child {
             font-style: normal;
             font-weight: bold;
-            font-size: 25px;
+            font-size: 26px;
             line-height: 32px;
             letter-spacing: 0.03em;
         }
@@ -252,6 +254,8 @@
 
 .field_value {
     padding: 0 10px;
+    letter-spacing: 0.06em;
+//    opacity: 0.8;
 }
 
 .hidden {

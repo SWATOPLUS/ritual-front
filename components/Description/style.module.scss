@@ -7,6 +7,9 @@
     h3 {
         margin: -7px 0 20px 0;
         font-weight: 600;
+        font-size: 40px;
+        line-height: 40px;
+        letter-spacing: 0.02em;
     }
     h1 {
         font-weight: 600;
@@ -14,6 +17,11 @@
         line-height: 40px;
         letter-spacing: 0.02em;
     }
+}
+.description_p {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
 }
 .btn_grad {
     font-weight: 700;

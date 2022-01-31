@@ -21,7 +21,7 @@ export const Description = () => {
                         </Col>
                         <Col className={styles.description}>
                             <h3>Задумывались ли вы о том, что память о близком человеке можно сохранить навсегда? </h3>
-                            <p>
+                            <p className={styles.description_p}>
                                 Благодаря нашей услуге это стало реально!
                                 <br />
                                 <br />
