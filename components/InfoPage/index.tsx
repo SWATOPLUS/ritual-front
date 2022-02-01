@@ -1,7 +1,5 @@
-import { useRouter } from "next/router"
 import { ReactNode } from "react"
-import { Button, Container } from "react-bootstrap"
-import { useSelector } from "react-redux"
+import { Container } from "react-bootstrap"
 import { Footer } from "../../components/Footer"
 import styles from './style.module.scss'
 
@@ -13,16 +11,6 @@ interface InfoPageProps {
 }
 
 export const InfoPage = ({text, title, children, paddingTop = "120px"}: InfoPageProps) => {
-    const router = useRouter();
-    const isLoggedIn = useSelector((state:any) => state.auth.isLoggedIn);
-
-    const handleBack = () => {
-        if(isLoggedIn) {
-            router.back()
-        }
-        return
-    }
-    
     return (
         <div className={styles.info}>
             <main style={{paddingTop}}>
@@ -47,7 +35,6 @@ export const InfoPage = ({text, title, children, paddingTop = "120px"}: InfoPage
                 ): null}
                 {children? (
                     <Container>
-                        <Button variant="outline-light" onClick={handleBack}>Назад</Button>
                         {children}
                     </Container>
                 ) : null}    

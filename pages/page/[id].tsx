@@ -1,4 +1,7 @@
 import { NextPage, NextPageContext } from "next";
+import { useRouter } from "next/router";
+import { Button } from "react-bootstrap";
+import { useSelector } from "react-redux";
 import { getPageReq } from "../../api/page";
 import { TransitionGallery } from "../../components/Gallery/Transition";
 import { InfoPage } from "../../components/InfoPage";
@@ -15,6 +18,16 @@ interface PageProps {
 }
 
 const Page: NextPage<PageProps> = ({page, id}) => {
+
+    const router = useRouter();
+    const isLoggedIn = useSelector((state: any) => state.auth.isLoggedIn);
+
+    const handleBack = () => {
+        if(isLoggedIn) {
+            router.back()
+        }
+        return
+    }
     
     const haveMedia = page.pictures.length || page.videos.length;
     console.log(haveMedia)
@@ -22,6 +35,7 @@ const Page: NextPage<PageProps> = ({page, id}) => {
     return (
         <>
             <InfoPage>
+                <Button className={styles.button} variant="outline-light" onClick={handleBack}>Назад</Button>
                 <Biography user={page}/>
                 <AboutPeople user={page}/>
                 {haveMedia && <TransitionGallery 
