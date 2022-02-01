@@ -42,13 +42,11 @@ export const AuthForm = () => {
     const dispatch = useDispatch();
     const alert = useAlertContext();
     const modal = useModalContext();
-    
-    const recoverPassForm = useModalContext().setModal({name: RECOVER, isShow: true})
-    const handleRecover = recoverPassForm;
+
+    const handleRecover = () => modal.setModal({name: RECOVER, isShow: true});
 
     useEffect(() => {
         const tabId = modal.state.tabId;
-        console.log('ue ' + tabId);
 
         if (!tabId) {
             return;
