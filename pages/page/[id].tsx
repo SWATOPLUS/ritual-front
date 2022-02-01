@@ -6,6 +6,7 @@ import { Map } from "../../components/Map";
 import { AboutPeople } from "../../components/Page/AboutPeople";
 import { Biography } from "../../components/Page/Biography";
 import { QrCode } from "../../components/QrCode";
+import styles from "./style.module.scss"
 
 interface PageProps {
     page?: any,
@@ -28,7 +29,7 @@ const Page: NextPage<PageProps> = ({page, id}) => {
                     videos={page.videos}
                     idGallery={id}/>}
                 <div>
-                    <p>Смотреть на карте:</p>
+                    <p className={styles.map_title}>Смотреть на карте:</p>
                     <Map coordinates={page?.coords}/>
                 </div>
                 <QrCode qrCodes={page.qr_code}/>

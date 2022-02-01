@@ -1,6 +1,10 @@
 .field {
     position: relative;
     margin-top: 20px;
+
+    textarea::placeholder {
+        color: rgba(0, 0, 0, 0.2);
+    }
     
     .field_input {
         border: 1px solid #9E9E9E;
@@ -8,6 +12,9 @@
         background: none;
         z-index: 1;
         margin-top: 20px;
+        font-size: 17px;
+        line-height: 21px;
+        letter-spacing: 0.03em;
 
         ~span{
             font-size: 13px;

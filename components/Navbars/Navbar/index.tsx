@@ -42,7 +42,7 @@ export const Navbar = () => {
                         </Button>
                         <Button variant="outline-light" onClick={handleLogout}><img src={exitIcon.src} /></Button>
                     </ButtonGroup>
-                ):<Button variant="outline-light" onClick={handleOpen}>Вход</Button>}
+                ):<Button className={styles.link} variant="outline-light" onClick={handleOpen}>Вход</Button>}
                 
             </Container>
         </header>

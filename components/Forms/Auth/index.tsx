@@ -143,7 +143,7 @@ export const AuthForm = () => {
                 ):(
                     
                     <Form valid={loginForm} fields={fieldsLog} Input={InputModal}>
-                        <Checkbox active={save} onClick={()=>setSave(!save)} className={styles.point} text="Запомнить пароль"/>
+                        <Checkbox active={save} onClick={()=>setSave(!save)} className={styles.point} textClass={styles.remember_pass} pointClass={classNames(styles.remember_point, {[styles.remember_point_selected]: save})} text="Запомнить пароль"/>
                         <Row className={styles.btn_group}>
                             <Col xs={6}>
                                 <Button onClick={loginForm.handleSubmit(submitLogin)} className={styles.btn}>Войти</Button>

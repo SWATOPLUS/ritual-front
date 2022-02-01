@@ -58,7 +58,7 @@ export const CarouselImage = ({images, setImages, mainImage, setMainImage}: Caro
                                     className={styles.item}>
                                     <div className={styles.block_point}>
                                         <Checkbox onClick={()=>handleClickPoint(val.id)} active={mainImage == val.id}/>
-                                        <p>Сделать главным</p>
+                                        <p className={styles.set_main_photo}>Сделать главным</p>
                                     </div>
                                     <img src={pathFromServer(val.url)} onClick={(ev)=>handleClickImage(ev, ind)}/>
                                 </div>

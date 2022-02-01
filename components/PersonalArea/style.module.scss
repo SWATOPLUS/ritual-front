@@ -68,9 +68,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 15px 30px;
+    padding: 25px 30px;
     height: 100%;
     .title {
+        color: rgba(14, 38, 73, 1);;
         font-style: normal;
         font-weight: bold;
         font-size: 26px;
@@ -79,14 +80,17 @@
     }
     .description {
         font-style: normal;
-        font-weight: 500;
-        font-size: 15px;
+        font-weight: 400;
+        font-size: 17px;
         line-height: 21px;
     }
     .btn {
         margin-top: 50px;
         background: #0E2649;
         border: none;
+        padding: 10px 15px;
+        font-size: 14px;
+        line-height: 17px;
         &:focus {
             background: #0E2649 !important;
             border: none;
@@ -99,7 +103,10 @@
     flex-direction: column;
     width: 100%;
     .title {
-        margin-bottom: 100px
+        margin-bottom: 100px;
+        color: rgba(100, 100, 100, 1);
+        font-size: 17px;
+        line-height: 21px;
     }
     .social {
         height: 71px;
@@ -242,6 +249,8 @@
 
 .btn_none {
     padding: 10px 30px;
+    font-size: 14px !important;
+    line-height: 17px;
     color: #FF0000 !important;
     border: solid 1px #FF0000 !important;
     border-radius: 0 !important;
@@ -252,10 +261,15 @@
     font-size: 28px;
 }
 
+.label {
+    font-size: 17px;
+    line-height: 21px;
+    color: rgba(85, 85, 85, 1);
+}
+
 .field_value {
-    padding: 0 10px;
     letter-spacing: 0.06em;
-//    opacity: 0.8;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 .hidden {
