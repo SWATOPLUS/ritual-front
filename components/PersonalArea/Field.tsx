@@ -75,7 +75,7 @@ export const Field = ({icon, label = "", data, name, onClick }: FieldProps) => {
                     </div>
                     
                     <div>
-                        {label}
+                        {label? <span className={styles.label}>{label}</span> : null}
                         {" "}
                         <p className={classNames(styles.field_value, {[styles.password]: name == 'password', [styles.hidden]: isChange})}>
                             {value}

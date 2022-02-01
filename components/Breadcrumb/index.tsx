@@ -37,7 +37,7 @@ Breadcrumb.Item = ({ children, isActive = false, onClick = () =>{}}: BreadcrumbI
         <div 
             onClick={()=>onClick()}
             className={csx(styles.item, {[styles.active]: isActive})} >
-            <h2>
+            <h2 className={styles.title}>
                 {children}
             </h2>
         </div>

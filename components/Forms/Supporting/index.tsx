@@ -30,7 +30,7 @@ export const SupportingForm = () => {
                 <div className={styles.container_input}>
                     <textarea className={styles.textinput} ref={input} value={text} onChange={handleChange} placeholder="Опишите проблему"/>
                     <button className={styles.btn} onClick={handleClick}>
-                        <Image src={sendIcon}/>
+                        <Image className={styles.send_icon} src={sendIcon}/>
                     </button>
                     <div className={styles.textdiv} ref={hiddenDiv}>{text + " "}</div>
                 </div>

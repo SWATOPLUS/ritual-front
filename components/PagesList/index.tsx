@@ -58,7 +58,7 @@ export const Page = ({
     const statusActiveItems = (status: number) => {
         if(!payed) return (
             <div className={styles.status_content__buttons}>
-                <Button onClick={handleOpenPay}>Оплатить</Button>
+                <Button className={styles.button} onClick={handleOpenPay}>Оплатить</Button>
                 <div className={styles.price}>{price}₽</div>
             </div>
         )

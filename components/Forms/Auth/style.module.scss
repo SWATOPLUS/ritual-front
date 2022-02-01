@@ -4,6 +4,9 @@
     height: 51px;
     width: 100%;
     border: none;
+    font-weight: 700 !important;
+    font-size: 15px !important;
+    letter-spacing: 0.03em;
 }
 .or {
     margin-top: 10px !important;
@@ -14,6 +17,8 @@
     display: flex;
     align-items: center;
     color: rgba(51, 51, 243, 0.9);
+    font-size: 13px;
+    letter-spacing: 0.03em;
 }
 
 .point {
@@ -21,6 +26,19 @@
     &::after {
         background-color: rgba(0, 0, 0, 0.28) !important;
     }
+}
+.remember_pass {
+    color: rgba(0, 0, 0, 0.7);
+}
+.remember_point {
+    border-color: rgba(0, 0, 0, 0.5)!important;
+    &::after {
+        border-color: rgba(73, 73, 244, 1) !important;
+        background-color: rgba(73, 73, 244, 1) !important;
+    }
+}
+.remember_point_selected {
+    border-color: rgba(73, 73, 244, 1) !important;
 }
 .btn_group {
     margin-top: 15px !important;

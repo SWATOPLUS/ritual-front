@@ -65,7 +65,7 @@ export const PasswordChangeForm = () => {
             </Breadcrumb>
             <div>
                 <Form valid={form} fields={fieldsReg} Input={InputModal}>
-                    <Button onClick={form.handleSubmit(handleSubmit)} style={{marginTop: '20px'}}>Изменить</Button>
+                    <Button onClick={form.handleSubmit(handleSubmit)} style={{marginTop: '20px', fontWeight: 700, letterSpacing: '0.03em'}}>Изменить</Button>
                 </Form>
             </div>
         </div>

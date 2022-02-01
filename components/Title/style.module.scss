@@ -1,6 +1,9 @@
 .title {
-    font-family: var(--bs-body-font-family);
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
     font-size: 50px;
+    line-height: 61px;
     margin: 10px;
     &.start {
         text-align: start;
