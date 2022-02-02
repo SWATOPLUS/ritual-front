@@ -17,6 +17,7 @@ import { useDispatch } from "react-redux";
 import { login, register } from "../../../redux/actions/auth";
 import { useAlertContext } from "../../../contexts/alert";
 import { useModalContext } from "../../../contexts/modals";
+import { RECOVER } from "../../../constants/modal";
 
 type InputsRegister = {
     login: string,
@@ -42,9 +43,10 @@ export const AuthForm = () => {
     const alert = useAlertContext();
     const modal = useModalContext();
 
+    const handleRecover = () => modal.setModal({name: RECOVER, isShow: true});
+
     useEffect(() => {
         const tabId = modal.state.tabId;
-        console.log('ue ' + tabId);
 
         if (!tabId) {
             return;
@@ -149,7 +151,7 @@ export const AuthForm = () => {
                                 <Button onClick={loginForm.handleSubmit(submitLogin)} className={styles.btn}>Войти</Button>
                             </Col>
                             <Col xs={6} className={styles.password}>
-                                Забыли пароль?
+                                <button onClick={handleRecover}>Забыли пароль?</button>
                             </Col>
                         </Row>
                     </Form>

@@ -6,3 +6,4 @@ export const DELETE = 'DELETE';
 export const PAY = 'PAY';
 export const PROMO_CODE = 'PROMO_CODE';
 export const REVIEW = 'REVIEW';
+export const RECOVER = 'RECOVER'
