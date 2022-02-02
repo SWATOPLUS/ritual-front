@@ -4,7 +4,8 @@ export const loginReq = (data: any) => axios.post('users/login/', data);
 export const registerReq = (data: any) => axios.post( "users/register/", data );
 export const refreshReq = () => axios.post("token/refresh/");
 export const logoutReq = (refresh: string) => axios.post('users/logout/', {refresh});
-export const restorePassReq = (data: RestorePassRequest) => axios.post('user/change_pwd', {user: data})
+export const restorePassReq = (data: RestorePassRequest) => axios.post('user/change_pwd/', {user: data})
+export const getRecoverCodeReq = (email: string) => axios.post('forgot_password/', { email })
 
 export const verifyEmailReq = (hash: any) => axios.post('verify_email/', { hash }, );
 
