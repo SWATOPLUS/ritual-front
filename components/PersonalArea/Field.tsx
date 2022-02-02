@@ -9,6 +9,7 @@ import successIcon from '../../public/icons/SuccessField.svg'
 import { editEmailReq, userEditReq } from "../../api/user";
 import { useAlertContext } from "../../contexts/alert";
 import classNames from "classnames";
+import { focusAndOpenKeyboard } from "../../utils/focus";
 
 interface FieldProps {
     icon: any,
@@ -60,7 +61,9 @@ export const Field = ({icon, label = "", data, name, onClick }: FieldProps) => {
     const handleChange = (ev: any) => setValue(ev.target.value);
 
     useEffect(() => {
-        name != 'password' && ref.current?.focus();
+        if (name != 'password' && ref.current) {
+            focusAndOpenKeyboard(ref.current);
+        }
     }, [isChange])
 
     return (
