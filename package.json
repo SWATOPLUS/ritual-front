@@ -26,6 +26,7 @@
     "react-select": "^5.2.1",
     "react-slick": "^0.28.1",
     "react-telegram-login": "^1.1.2",
+    "react-verification-input": "^2.0.4",
     "react-yandex-maps": "^4.6.0",
     "redux": "^4.1.2",
     "redux-thunk": "^2.4.1",
