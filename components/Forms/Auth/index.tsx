@@ -151,7 +151,7 @@ export const AuthForm = () => {
                                 <Button onClick={loginForm.handleSubmit(submitLogin)} className={styles.btn}>Войти</Button>
                             </Col>
                             <Col xs={6} className={styles.password}>
-                                <Button onClick={handleRecover}>Забыли пароль?</Button>
+                                <button onClick={handleRecover}>Забыли пароль?</button>
                             </Col>
                         </Row>
                     </Form>

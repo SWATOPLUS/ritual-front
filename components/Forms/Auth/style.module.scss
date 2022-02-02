@@ -16,9 +16,14 @@
     text-align: center;
     display: flex;
     align-items: center;
-    color: rgba(51, 51, 243, 0.9);
-    font-size: 13px;
-    letter-spacing: 0.03em;
+    button {
+        padding-left: 10px;
+        color: rgba(51, 51, 243, 0.9);
+        font-size: 13px;
+        letter-spacing: 0.03em;
+        background-color: transparent;
+        border-color: transparent;
+    }
 }
 
 .point {
