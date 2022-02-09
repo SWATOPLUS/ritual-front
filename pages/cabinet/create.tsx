@@ -24,7 +24,7 @@ const Create: NextPage = () => {
         <>
             <CabinetNavbar/>
             <Container>
-                <Title>Добавление новой страницы</Title>
+                <Title align="center">Добавление страницы</Title>
                 <PageForm onSubmit={handleCreatePage}/>
             </Container>
         </>
